@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">WikiDex</string>
+    <string name="lobby_tittle">Bienvenido!</string>
+    <string name="lobby_description">WikiDex! Es un proyecto hecho para recolectar informacion sobre la saga de pokemon
+    y brindarla a ustedes de una forma accesible y facil de leer.\n\nAqui puedes leer informacion sobre:</string>
+    <string name="card1_title">Regiones</string>
+    <string name="card1_description">Informacion sobre todas las regiones del mundo Pokemon.</string>
+    <string name="card2_title">Iniciales</string>
+    <string name="card2_description">Informacion sobre los iniciales de cada region.</string>
+    <string name="card3_title">Pokeballs</string>
+    <string name="card3_description">Informacion sobre todas las Pokeballs existentes.</string>
+    <string name="button_press">Go!</string>
+
+    <string name="bc_images_description">Imagenes usada para el fondo de las card views</string>
+    <string name="region_images_description">Imagenes usadas para mostrar las regiones</string>
+
+
+    <string name="region_tittle">Regiones</string>
+    <string name="region_description">Las regiones del mundo pokemon son los lugares donde transcurren los animes y los videojuegos.
+    Aqui tenemos una breve descripcion para todas las regiones existentes hasta ahora.</string>
+
+
+    <string name="kanto_description">La region de Kanto fue la primera region que nos introduce al mundo pokemon y nos da a conocer personajes iconicos como
+    Ash, Misty y Brock. Esta ciudad esta inspirada en Japon y se conecta con la region de Johto. La gran mayoria de las ciudades tienen nombres de colores como por ejemplo
+    Ciudad Verde, Ciudad Carmin y Ciudad Azafran (Una de las mas importantes en los videojuegos)</string>
+
+    <string name="johto_description">Esta region se conecta con Kanto y es posible ver esta conexion dentro de los juegos de Oro, Cristal, Ruby y en sus respectivos remakes
+        Soul Silver y Heart Gold. Esta region tiene nombres de ciudades relacionados con plantas o vegetacion.</string>
+
+    <string name="hoenn_description">Tercera region muy conocida por su peculiar geologia y variados climas. Tambien esta inspirada en Japon y en especifico
+    en la isla Kyushu pero girada en 90 grados, motivo por el cual se dice que en realidad no es una region sino un archipielago, pues, tambien cuenta con islas chicas
+    alrededor de toda la gran Hoenn.</string>
+    
+    <string name="sinnoh_description">Cuarta region muy conocida por su Campeona del Alto Mando Cynthia. Es una region basada tambien en una de las islas de Japon,
+    en concreto, se basa en Hokkaido. Su nombre proviene de la palabra "Shin'o" que significa Misterio haciendo alusiona los numerosos misterios de la region.
+        Esta region es mayoritariamente tierra y cuenta con climas muy frios, tanto asi que aqui es donde vemos la
+    mecanica de la nieve por primera vez en los juegos.</string>
+    
+    <string name="teselia_description">Esta es la primera region que se basa en un pais que no es Japon y usa como inspiracion a New York y se hace notar mucho
+    el cambio de cultura, pues pasamos de ver islas con gente calmada y serena a ver una ciudad donde la gente pasa atareada. Podemos ver tambien una estructura muy moderna
+    con grandes edificios y musica moderna, esto se ve reflejado tambien en los nombres de las ciudades pues aqui las ciudades tienen nombres de materiales de construccion
+    como por ejemeplo Pueblo Arcilla, Ciudad Porcelana, Ciudad Teja y Bosque Azulejo.</string>
+
+    <string name="kalos_description">La quinta region se basa en el pais Francia y la capital de Kalos es Ciudad Luminalia la cual cuenta con una torre al centro
+    de la ciudad haciendo referencia a la torre Eiffel de Paris. Su nombre proviene de una palabra griega "κάλλος" que se pronuncia kalos y significa "Bello".
+    Esto se hace notar pues las estructuras de los edificios estan elegantemente detalladas, aparecen lugares donde tomar cafe y comer dulces franceses y puedes entrar
+    a diferentes "Boutiques". La belleza esta tan presente en el juego que los Pokemon pueden tener cortes de cabello y se nos introducen nuevos Pokemon con tematica
+    elegante y refinada.</string>
+
+    <string name="alola_description">Alola es la sexta region y esta conformada por cuatro islas muy grandes llenas de vegetacion. Aqui se nos muestra un lado humano
+    mucho mas unido a la flora y fauna de cada region e intenta guardar una similitud con islas como las Islas de Pascua o Hawai. Esto se hace notar en su
+    peculiar saludo "Alola" al momento de saludar y despedirse. Aqui volvemos a ver gente relajada, calida y agradable como en las primeras regiones.</string>
+
+    <string name="galar_description">Galar esta basada en Gran Bretaña, es una ciudad enorme que cuenta con paisajes muy diversos como
+        bosques frondosos y ciudades con tecnologia avanzada todo dentro de la misma region. Esta region nos muestra lso combates Pokemon mas como un deporte,
+    los protagonistas usan ropa deportiva con numeros de camisetas y las peleas se llevan a cabo dentro de grandes estadios con gente coreando canticos.</string>
+
+    <string name="paldea_description">Paldea es la ultima region en salir hasta el momento (o penultima si contamos Hisui como una region nueva, muchos prefieren no
+        tomarla como region nueva pues es Sinnoh hace cientos de años atras.) Esta basada en la Peninsula Iberica de España y su nombre proviene de las palabras
+    pal(amigo, compañero) y paideia del griego (educacion, formacion). Esto debido a que en los juegos se nos introduce a una academia donde tenemos estudios formales
+    de como ser amigos de los Pokemon y como ser buen entrenador. Esta ciudad cuenta con muchas ciudades y sitios que toman fuerte inspiracion en distinos lugares de España
+    y cuenta con un lugar prohibido ubicado al centro de la region que es un hoyo enorme llamado la Zona Cero donde habitan Pokemon del futuro y del pasado</string>
+
+
+</resources>

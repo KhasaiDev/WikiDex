@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/lobbyFragment">
+
+    <fragment
+        android:id="@+id/lobbyFragment"
+        android:name="com.example.wikidex.view.lobby.LobbyFragment"
+        android:label="fragment_lobby"
+        tools:layout="@layout/fragment_lobby">
+        <action
+            android:id="@+id/regionLobby_to_regionFragment"
+            app:destination="@id/regionesFragment"/>
+        <action
+            android:id="@+id/inicialesLobby_to_inicialesFragment"
+            app:destination="@id/inicialesFragment2"/>
+        <action
+            android:id="@+id/pokeballsLobby_to_pokeballsFragment"
+            app:destination="@id/pokebolaFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/regionesFragment"
+        android:name="com.example.wikidex.view.regiones.RegionesFragment"
+        android:label="fragment_regiones"
+        tools:layout="@layout/fragment_regiones" />
+    <fragment
+        android:id="@+id/inicialesFragment2"
+        android:name="com.example.wikidex.view.iniciales.InicialesFragment"
+        android:label="fragment_iniciales"
+        tools:layout="@layout/fragment_iniciales" />
+    <fragment
+        android:id="@+id/pokebolaFragment"
+        android:name="com.example.wikidex.view.pokebolas.PokebolaFragment"
+        android:label="fragment_pokebola"
+        tools:layout="@layout/fragment_pokebola" />
+</navigation>
