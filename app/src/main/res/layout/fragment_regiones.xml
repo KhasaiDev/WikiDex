@@ -1,536 +1,566 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <ScrollView
-        android:fillViewport="true"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:paddingBottom="15dp"
+    android:background="@color/redTrans"
+    tools:context=".view.lobby.LobbyFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".view.lobby.LobbyFragment"
-        android:paddingBottom="15dp">
-        <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="wrap_content">
+        <!-- Titulo -->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/region_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/amiko"
+            android:text="@string/region_tittle"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/region_description"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Descripcion -->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/region_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/amiko"
+            android:paddingBottom="20dp"
+            android:text="@string/region_description"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/region_title" />
+
+        <!-- CardView 1 (Kanto) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/kanto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
->
-            <!-- Titulo -->
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/region_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/region_tittle"
-                android:textColor="@color/black"
-                android:textSize="30sp"
-                android:fontFamily="@font/amiko"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintBottom_toTopOf="@+id/region_description"
-                android:layout_marginTop="10dp"
-                />
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toTopOf="@id/johto"
+            app:layout_constraintTop_toBottomOf="@id/region_description"
+            app:strokeColor="@color/black">
 
-            <!-- Descripcion -->
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/region_description"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/region_description"
-                android:textSize="17sp"
-                android:textColor="@color/black"
-                android:layout_margin="10dp"
-                android:paddingBottom="20dp"
-                android:fontFamily="@font/amiko"
-                app:layout_constraintTop_toBottomOf="@id/region_title"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
-
-            <!-- CardView 1 (Kanto) -->
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/kanto"
-                app:layout_constraintTop_toBottomOf="@id/region_description"
-                app:layout_constraintBottom_toTopOf="@id/johto"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
-                android:layout_marginStart="7dp"
-                android:layout_marginEnd="7dp"
-                app:strokeColor="@color/black"
-                >
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <ImageView
-                        android:id="@+id/kanto_image"
-                        android:layout_width="0dp"
-                        android:layout_height="200dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/kanto"
-                        android:contentDescription="@string/region_images_description"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"/>
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/kanto_title"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:text="Kanto"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:textColor="@color/black"
-                        app:fontFamily="@font/amiko"
-                        app:layout_constraintTop_toBottomOf="@id/kanto_image"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        android:paddingTop="10dp"
-                        android:paddingStart="16dp"
-                        android:paddingEnd="16dp"/>
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/text_view_description"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="@string/kanto_description"
-                        android:textSize="15sp"
-                        android:textColor="@color/black"
-                        app:fontFamily="@font/amiko"
-                        app:layout_constraintTop_toBottomOf="@id/kanto_title"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        android:paddingTop="8dp"
-                        android:paddingStart="15dp"
-                        android:paddingEnd="15dp"
-                        android:paddingBottom="8dp"/>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.google.android.material.card.MaterialCardView>
+                android:layout_height="wrap_content">
 
+                <ImageView
+                    android:id="@+id/kanto_image"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:contentDescription="@string/region_images_description"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/kanto"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <!-- CardView 2 (Johto)-->
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/johto"
-                app:layout_constraintTop_toBottomOf="@id/kanto"
-                app:layout_constraintBottom_toTopOf="@id/hoenn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
-                android:layout_marginStart="7dp"
-                android:layout_marginEnd="7dp"
-                app:strokeColor="@color/black">
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/kanto_title"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:paddingBottom="8dp">
-                    <ImageView
-                        android:id="@+id/johto_image"
-                        android:layout_width="0dp"
-                        android:layout_height="200dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/johto"
-                        android:contentDescription="@string/bc_images_description"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"/>
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/johto_title"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:text="Johto"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:textColor="@color/black"
-                        app:fontFamily="@font/amiko"
-                        app:layout_constraintTop_toBottomOf="@id/johto_image"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        android:paddingTop="10dp"
-                        android:paddingStart="16dp"
-                        android:paddingEnd="16dp"/>
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/johto_description"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="@string/johto_description"
-                        android:textSize="15sp"
-                        android:textColor="@color/black"
-                        app:fontFamily="@font/amiko"
-                        app:layout_constraintTop_toBottomOf="@id/johto_title"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        android:paddingTop="8dp"
-                        android:paddingStart="15dp"
-                        android:paddingEnd="15dp"
-                        android:paddingBottom="8dp"/>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.google.android.material.card.MaterialCardView>
+                    android:gravity="center"
+                    android:paddingStart="16dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="16dp"
+                    android:text="Kanto"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/amiko"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/kanto_image" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/text_view_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingStart="15dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/kanto_description"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:fontFamily="@font/amiko"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/kanto_title" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
 
 
+        <!-- CardView 2 (Johto)-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/johto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toTopOf="@id/hoenn"
+            app:layout_constraintTop_toBottomOf="@id/kanto"
+            app:strokeColor="@color/black">
 
-            <!-- CardView 3 (Hoenn)-->
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/hoenn"
-                app:layout_constraintTop_toBottomOf="@id/johto"
-                app:layout_constraintBottom_toTopOf="@id/sinnoh"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
-                android:layout_marginStart="7dp"
-                android:layout_marginEnd="7dp"
-                app:strokeColor="@color/black">
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
+                android:paddingBottom="8dp">
+
+                <ImageView
+                    android:id="@+id/johto_image"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:contentDescription="@string/bc_images_description"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/johto"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/johto_title"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:paddingBottom="8dp">
-                    <ImageView
-                        android:id="@+id/hoenn_image"
-                        android:layout_width="0dp"
-                        android:layout_height="200dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/hoenn"
-                        android:contentDescription="@string/bc_images_description"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"/>
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/hoenn_title"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:text="Hoenn"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:textColor="@color/black"
-                        app:fontFamily="@font/amiko"
-                        app:layout_constraintTop_toBottomOf="@id/hoenn_image"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        android:paddingTop="10dp"
-                        android:paddingStart="16dp"
-                        android:paddingEnd="16dp"/>
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/hoenn_description"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="@string/hoenn_description"
-                        android:textSize="15sp"
-                        android:textColor="@color/black"
-                        app:fontFamily="@font/amiko"
-                        app:layout_constraintTop_toBottomOf="@id/hoenn_title"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        android:paddingTop="8dp"
-                        android:paddingStart="15dp"
-                        android:paddingEnd="15dp"
-                        android:paddingBottom="8dp"/>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.google.android.material.card.MaterialCardView>
+                    android:gravity="center"
+                    android:paddingStart="16dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="16dp"
+                    android:text="Johto"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/amiko"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/johto_image" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/johto_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingStart="15dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/johto_description"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:fontFamily="@font/amiko"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/johto_title" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
 
 
-            <!-- CardView 4 (Sinnoh)-->
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/sinnoh"
-                app:layout_constraintTop_toBottomOf="@id/hoenn"
-                app:layout_constraintBottom_toTopOf="@id/teselia"
+        <!-- CardView 3 (Hoenn)-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/hoenn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toTopOf="@id/sinnoh"
+            app:layout_constraintTop_toBottomOf="@id/johto"
+            app:strokeColor="@color/black">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
-                android:layout_marginStart="7dp"
-                android:layout_marginEnd="7dp"
-                app:strokeColor="@color/black">
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
+                android:paddingBottom="8dp">
+
+                <ImageView
+                    android:id="@+id/hoenn_image"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:contentDescription="@string/bc_images_description"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/hoenn"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/hoenn_title"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:paddingBottom="8dp">
-                    <ImageView
-                        android:id="@+id/sinnoh_image"
-                        android:layout_width="0dp"
-                        android:layout_height="200dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/sinnoh"
-                        android:contentDescription="@string/bc_images_description"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"/>
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/sinnoh_tittle"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:text="Sinnoh"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:textColor="@color/black"
-                        app:fontFamily="@font/amiko"
-                        app:layout_constraintTop_toBottomOf="@id/sinnoh_image"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        android:paddingTop="10dp"
-                        android:paddingStart="16dp"
-                        android:paddingEnd="16dp"/>
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/sinnoh_description"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="@string/sinnoh_description"
-                        android:textSize="15sp"
-                        android:textColor="@color/black"
-                        app:fontFamily="@font/amiko"
-                        app:layout_constraintTop_toBottomOf="@id/sinnoh_tittle"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        android:paddingTop="8dp"
-                        android:paddingStart="15dp"
-                        android:paddingEnd="15dp"
-                        android:paddingBottom="8dp"/>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.google.android.material.card.MaterialCardView>
+                    android:gravity="center"
+                    android:paddingStart="16dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="16dp"
+                    android:text="Hoenn"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/amiko"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/hoenn_image" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/hoenn_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingStart="15dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/hoenn_description"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:fontFamily="@font/amiko"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/hoenn_title" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
 
 
-            <!-- CardView 5 (Teselia)-->
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/teselia"
-                app:layout_constraintTop_toBottomOf="@id/sinnoh"
-                app:layout_constraintBottom_toTopOf="@id/kalos"
+        <!-- CardView 4 (Sinnoh)-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/sinnoh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toTopOf="@id/teselia"
+            app:layout_constraintTop_toBottomOf="@id/hoenn"
+            app:strokeColor="@color/black">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
-                android:layout_marginStart="7dp"
-                android:layout_marginEnd="7dp"
-                app:strokeColor="@color/black">
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
+                android:paddingBottom="8dp">
+
+                <ImageView
+                    android:id="@+id/sinnoh_image"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:contentDescription="@string/bc_images_description"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/sinnoh"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/sinnoh_tittle"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:paddingBottom="8dp">
-                    <ImageView
-                        android:id="@+id/teselia_image"
-                        android:layout_width="0dp"
-                        android:layout_height="200dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/teselia"
-                        android:contentDescription="@string/bc_images_description"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"/>
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/teselia_tittle"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:text="Teselia/Unova"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:textColor="@color/black"
-                        app:fontFamily="@font/amiko"
-                        app:layout_constraintTop_toBottomOf="@id/teselia_image"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        android:paddingTop="10dp"
-                        android:paddingStart="16dp"
-                        android:paddingEnd="16dp"/>
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/teselia_description"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="@string/teselia_description"
-                        android:textSize="15sp"
-                        android:textColor="@color/black"
-                        app:fontFamily="@font/amiko"
-                        app:layout_constraintTop_toBottomOf="@id/teselia_tittle"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        android:paddingTop="8dp"
-                        android:paddingStart="15dp"
-                        android:paddingEnd="15dp"
-                        android:paddingBottom="8dp"/>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.google.android.material.card.MaterialCardView>
+                    android:gravity="center"
+                    android:paddingStart="16dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="16dp"
+                    android:text="Sinnoh"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/amiko"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sinnoh_image" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/sinnoh_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingStart="15dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/sinnoh_description"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:fontFamily="@font/amiko"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sinnoh_tittle" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
 
 
-            <!-- CardView 6 (Kalos)-->
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/kalos"
-                app:layout_constraintTop_toBottomOf="@id/teselia"
-                app:layout_constraintBottom_toTopOf="@id/alola"
+        <!-- CardView 5 (Teselia)-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/teselia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toTopOf="@id/kalos"
+            app:layout_constraintTop_toBottomOf="@id/sinnoh"
+            app:strokeColor="@color/black">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
-                android:layout_marginStart="7dp"
-                android:layout_marginEnd="7dp"
-                app:strokeColor="@color/black">
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
+                android:paddingBottom="8dp">
+
+                <ImageView
+                    android:id="@+id/teselia_image"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:contentDescription="@string/bc_images_description"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/teselia"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/teselia_tittle"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:paddingBottom="8dp">
-                    <ImageView
-                        android:id="@+id/kalos_image"
-                        android:layout_width="0dp"
-                        android:layout_height="200dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/kalos"
-                        android:contentDescription="@string/bc_images_description"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"/>
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/kalos_tittle"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:text="Kalos"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:textColor="@color/black"
-                        app:fontFamily="@font/amiko"
-                        app:layout_constraintTop_toBottomOf="@id/kalos_image"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        android:paddingTop="10dp"
-                        android:paddingStart="16dp"
-                        android:paddingEnd="16dp"/>
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/kalos_description"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="@string/kalos_description"
-                        android:textSize="15sp"
-                        android:textColor="@color/black"
-                        app:fontFamily="@font/amiko"
-                        app:layout_constraintTop_toBottomOf="@id/kalos_tittle"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        android:paddingTop="8dp"
-                        android:paddingStart="15dp"
-                        android:paddingEnd="15dp"
-                        android:paddingBottom="8dp"/>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.google.android.material.card.MaterialCardView>
+                    android:gravity="center"
+                    android:paddingStart="16dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="16dp"
+                    android:text="Teselia/Unova"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/amiko"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/teselia_image" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/teselia_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingStart="15dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/teselia_description"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:fontFamily="@font/amiko"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/teselia_tittle" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
 
 
-            <!-- CardView 7 (Alola)-->
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/alola"
-                app:layout_constraintTop_toBottomOf="@id/kalos"
-                app:layout_constraintBottom_toTopOf="@id/galar"
+        <!-- CardView 6 (Kalos)-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/kalos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toTopOf="@id/alola"
+            app:layout_constraintTop_toBottomOf="@id/teselia"
+            app:strokeColor="@color/black">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
-                android:layout_marginStart="7dp"
-                android:layout_marginEnd="7dp"
-                app:strokeColor="@color/black">
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
+                android:paddingBottom="8dp">
+
+                <ImageView
+                    android:id="@+id/kalos_image"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:contentDescription="@string/bc_images_description"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/kalos"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/kalos_tittle"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:paddingBottom="8dp">
-                    <ImageView
-                        android:id="@+id/alola_image"
-                        android:layout_width="0dp"
-                        android:layout_height="200dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/alola"
-                        android:contentDescription="@string/bc_images_description"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"/>
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/alola_tittle"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:text="Alola"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:textColor="@color/black"
-                        app:fontFamily="@font/amiko"
-                        app:layout_constraintTop_toBottomOf="@id/alola_image"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        android:paddingTop="10dp"
-                        android:paddingStart="16dp"
-                        android:paddingEnd="16dp"/>
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/alola_description"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="@string/alola_description"
-                        android:textSize="15sp"
-                        android:textColor="@color/black"
-                        app:fontFamily="@font/amiko"
-                        app:layout_constraintTop_toBottomOf="@id/alola_tittle"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        android:paddingTop="8dp"
-                        android:paddingStart="15dp"
-                        android:paddingEnd="15dp"
-                        android:paddingBottom="8dp"/>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.google.android.material.card.MaterialCardView>
+                    android:gravity="center"
+                    android:paddingStart="16dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="16dp"
+                    android:text="Kalos"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/amiko"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/kalos_image" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/kalos_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingStart="15dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/kalos_description"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:fontFamily="@font/amiko"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/kalos_tittle" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
 
 
-            <!-- CardView 8 (Galar)-->
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/galar"
-                app:layout_constraintTop_toBottomOf="@id/alola"
-                app:layout_constraintBottom_toBottomOf="parent"
+        <!-- CardView 7 (Alola)-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/alola"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toTopOf="@id/galar"
+            app:layout_constraintTop_toBottomOf="@id/kalos"
+            app:strokeColor="@color/black">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
-                android:layout_marginStart="7dp"
-                android:layout_marginEnd="7dp"
-                app:strokeColor="@color/black">
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingBottom="8dp">
-                    <ImageView
-                        android:id="@+id/galar_image"
-                        android:layout_width="0dp"
-                        android:layout_height="200dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/galar"
-                        android:contentDescription="@string/bc_images_description"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"/>
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/galar_tittle"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:text="Galar"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:textColor="@color/black"
-                        app:fontFamily="@font/amiko"
-                        app:layout_constraintTop_toBottomOf="@id/galar_image"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        android:paddingTop="10dp"
-                        android:paddingStart="16dp"
-                        android:paddingEnd="16dp"/>
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/galar_description"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="@string/galar_description"
-                        android:textSize="15sp"
-                        android:textColor="@color/black"
-                        app:fontFamily="@font/amiko"
-                        app:layout_constraintTop_toBottomOf="@id/galar_tittle"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        android:paddingTop="8dp"
-                        android:paddingStart="15dp"
-                        android:paddingEnd="15dp"
-                        android:paddingBottom="8dp"/>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.google.android.material.card.MaterialCardView>
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                android:paddingBottom="8dp">
 
-    </ScrollView>
+                <ImageView
+                    android:id="@+id/alola_image"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:contentDescription="@string/bc_images_description"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/alola"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/alola_tittle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingStart="16dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="16dp"
+                    android:text="Alola"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/amiko"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/alola_image" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/alola_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingStart="15dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/alola_description"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:fontFamily="@font/amiko"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/alola_tittle" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- CardView 8 (Galar)-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/galar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/alola"
+            app:strokeColor="@color/black">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp">
+
+                <ImageView
+                    android:id="@+id/galar_image"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:contentDescription="@string/bc_images_description"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/galar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/galar_tittle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingStart="16dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="16dp"
+                    android:text="Galar"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/amiko"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/galar_image" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/galar_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingStart="15dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/galar_description"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:fontFamily="@font/amiko"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/galar_tittle" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
 

@@ -26,7 +26,12 @@
         android:id="@+id/regionesFragment"
         android:name="com.example.wikidex.view.regiones.RegionesFragment"
         android:label="fragment_regiones"
-        tools:layout="@layout/fragment_regiones" />
+        tools:layout="@layout/fragment_regiones">
+        <action
+            android:id="@+id/regionFragment_to_lobbyFragment"
+            app:destination="@id/lobbyFragment"/>
+    </fragment>
+
     <fragment
         android:id="@+id/inicialesFragment2"
         android:name="com.example.wikidex.view.iniciales.InicialesFragment"
