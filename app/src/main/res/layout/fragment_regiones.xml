@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:fillViewport="true"
     android:paddingBottom="15dp"
-    android:background="@color/redTrans"
+ 
     tools:context=".view.lobby.LobbyFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout

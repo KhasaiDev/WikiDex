@@ -35,9 +35,9 @@ class LobbyFragment : Fragment() {
         }
 
         //Navegar del Lobby a la info de las Pokeballs
-        binding.button3.setOnClickListener{
-            findNavController().navigate(R.id.pokeballsLobby_to_pokeballsFragment)
-        }
+//        binding.button3.setOnClickListener{
+//            findNavController().navigate(R.id.pokeballsLobby_to_pokeballsFragment)
+//        }
     }
 
     override fun onDestroyView() {
